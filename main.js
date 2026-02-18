@@ -91,3 +91,16 @@ function selectCard() {
         }
     }
 }
+
+function update() {
+    //If cards aren't the same, flip both back
+    if (card1Selected.src != card2Selected.src) {
+        card1Selected.src = "images/back.jpg";
+        card2Selected.src = "images/back.jpg";
+        errors += 1;
+        document.getElementById("errors").innerText = errors;
+    }
+
+    card1Selected = null;
+    card2Selected = null;
+}
